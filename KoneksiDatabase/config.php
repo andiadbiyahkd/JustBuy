@@ -1,17 +1,14 @@
 <?php
-$host = getenv('MYSQLHOST');
-$db   = getenv('MYSQLDATABASE');
-$user = getenv('MYSQLUSER');
-$pass = getenv('MYSQLPASSWORD');
-$port = getenv('MYSQLPORT');
+$host = 'localhost';
+$db = 'JustBuyDB';
+$user = 'root';
+$pass = ''; // Ganti dengan password MySQL Anda jika ada
 
 // Buat koneksi
-$conn = new mysqli($host, $user, $pass, $db, (int)$port);
+$conn = new mysqli($host, $user, $pass, $db);
 
 // Cek koneksi
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
-} else {
-    echo "Database connected successfully!";
 }
 ?>
