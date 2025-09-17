@@ -1,14 +1,14 @@
 <?php
-$host = "trolley.proxy.rlwy.net";
-$port = 59066;
-$db   = "JustBuyDb"; // atau JustBuyDB kalau kamu impor ke situ
-$user = "root";
-$pass = "BmdBQwnZWVpETKycvQJBHUpiCOJuXMNf";
+$host = 'localhost';
+$db = 'JustBuyDB';
+$user = 'root';
+$pass = ''; // Ganti dengan password MySQL Anda jika ada
 
-$conn = new mysqli($host, $user, $pass, $db, $port);
+// Buat koneksi
+$conn = new mysqli($host, $user, $pass, $db);
 
+// Cek koneksi
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-echo "✅ Connected to Railway DB";
 ?>
